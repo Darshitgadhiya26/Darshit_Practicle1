@@ -1,0 +1,111 @@
+1) Create a new project with .net core v- 6. (MVC structure)
+
+- We will provide you the database details.
+- Create a database with your name e.g. ABC_practicals.
+- Create a table called Category
+- Consider the below fields for above table
+	+ CategoryId
+	+ Name
+	+ Description
+	+ IsActive
+	+ CreatedOn
+	+ ModifiedOn	
+	+ ParentCategoryId
+
+- you need to perform below task
+
+	+ Create a page & display list of categories. 
+ 	+ Add a link button for adding  new Category
+	+ List have 3 buttons
+		* Edit
+		* Delete
+		* Active/Inactive (show according current status)		
+		* Add Child
+
+- Use Scaffold CRUD for Catgeory
+- Catgory Add/edit page have dropdown to select parent category. (optional but must show selected of parent category id child category editing)
+- When click on Add Child button from listing page, open a model popup when required fields place ajax call and use partial view for get html and posting data.
+- After successfully added child category list must be refreshed.
+- Show Parent catgroy if any in listing page.
+- User can delete parent category if their is child catgory. you need to ask to delete all child category else delete child category first.
+- Listing page have filter option by name & description
+- Use validation on name, IsActive field (both server & client side validation)
+- Show proper message on above mentions activities on complete. 
+- Validation must be fire before posting to server.
+- Use bootstrap class for look & feel.	
+
+
+
+- You have 8 hours for the practicals
+
+********************************  All The Best  ********************************
+
+MCQ & Practical Test
+Rajesh Muliya
+Darshit Gadhiya
+Rajesh Muliya
+Hello,
+
+ 
+
+Please find attached file for Practical Test Detail and first start it and then start MCQ test once @Krunal Shah will provide access for that.
+
+ 
+
+
+
+
+
+
+Rajesh Muliya | Team Leader - Dot Net
+Email: rajesh.muliya@technomark.io
+Phone: (808)838-4854
+Address: Texas | California | Hawaii
+Sydney | Ahmedabad | Mumbai | Hyderabad
+
+www.technomark.io
+
+Rajesh Muliya
+Darshit Gadhiya
+Rajesh Muliya
+Good Morning Team,
+
+MCQ: https://lms.pacificabs.com/moodle/mod/quiz/view.php?id=117&forceview=1
+
+Practical: https://lms.pacificabs.com/moodle/mod/quiz/view.php?id=135&forceview=1
+
+Password:
+
+TechnoMark_DN1_4_2023
+
+Do login via Azure AD as highlighted below.
+
+You have 30 min to complete your MCQ Test.
+
+Once your test will complete you will see your score, take a screenshot and sent to below emails
+
+rajesh.muliya@technomark.io
+
+ 
+
+NOTE: Trying to 2nd attempt, will be considered 0 mark.
+
+ 
+
+ 
+
+
+
+
+
+Rajesh Muliya | Team Leader - Dot Net
+Email: rajesh.muliya@technomark.io
+Phone: (808)838-4854
+Address: Texas | California | Hawaii
+Sydney | Ahmedabad | Mumbai | Hyderabad
+
+www.technomark.io
+
+ 
+
+ 
