@@ -175,33 +175,50 @@ namespace Darshit_Practicle1.Controllers
 
             return View(category);
         }
-
-        // POST: Categories/Delete/5
+        
+         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Category obj)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-
-
-            if (_context.Categories == null)
+            if (id == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
+                return NotFound();
             }
-            var removesub = _context.Categories.Where(x => x.ParentCategoryId == obj.CategoryId);
-            _context.Categories.RemoveRange(removesub);
-   
 
-            var category = await _context.Categories.FindAsync(obj.CategoryId);
+            var category = await _context.Categories.FindAsync(id);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            // Check if category has child categories
+            var childCategories = await _context.Categories
+                .Where(c => c.ParentCategoryId == id)
+                .ToListAsync();
+
+
+            if (childCategories.Any())
+            {
+                // Delete child categories
+                foreach (var childCategory in childCategories)
+                {
+                    _context.Categories.Remove(childCategory);
+                }
+            }
+           
             if (category != null)
             {
                 _context.Categories.Remove(category);
-                TempData["Success"] = "Category Removed Succesfully";
+                TempData["Success"] = "Category Removed Successfully";
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+       
         private bool CategoryExists(int id)
         {
             return (_context.Categories?.Any(e => e.CategoryId == id)).GetValueOrDefault();
